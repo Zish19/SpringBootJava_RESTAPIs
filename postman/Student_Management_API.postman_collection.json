@@ -1,0 +1,204 @@
+{
+  "info": {
+    "_postman_id": "a1b2c3d4-e5f6-7890-abcd-ef1234567890",
+    "name": "Student Management REST API - Project 2",
+    "description": "Postman Collection for Project 2: Student Management REST API built with Spring Boot, Spring Data JPA, Hibernate, and MySQL. Contains all six required REST API operations with request bodies and tests.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1. Add Student",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"id\": 105,\n  \"name\": \"Vikram Malhotra\",\n  \"email\": \"vikram.malhotra@university.edu\",\n  \"department\": \"Artificial Intelligence\",\n  \"scores\": [88.0, 95.5, 92.5],\n  \"technicalSkills\": [\"Python\", \"PyTorch\", \"TensorFlow\", \"FastAPI\"]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/students",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "students"
+          ]
+        },
+        "description": "Add a new student record to the MySQL database. Demonstrates HTTP 201 Created status, average score calculation, and duplicate ID prevention."
+      },
+      "response": []
+    },
+    {
+      "name": "2. Retrieve All Students",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/students",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "students"
+          ]
+        },
+        "description": "Retrieve all student records from the database. Demonstrates HTTP 200 OK."
+      },
+      "response": []
+    },
+    {
+      "name": "3. Search Student by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/students/101",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "students",
+            "101"
+          ]
+        },
+        "description": "Search and retrieve a student record by their primary key ID. Returns HTTP 200 OK or HTTP 404 Not Found."
+      },
+      "response": []
+    },
+    {
+      "name": "4. Update Student Scores and Technical Skills",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"scores\": [96.0, 98.0, 97.0],\n  \"technicalSkills\": [\"Python\", \"PyTorch\", \"TensorFlow\", \"FastAPI\", \"Docker\", \"MLOps\"]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/students/105/scores-and-skills",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "students",
+            "105",
+            "scores-and-skills"
+          ]
+        },
+        "description": "Update scores and technical skills for an existing student. Automatically recalculates average score. Returns HTTP 200 OK."
+      },
+      "response": []
+    },
+    {
+      "name": "5. Delete Student Record",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/students/103",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "students",
+            "103"
+          ]
+        },
+        "description": "Delete a student record by their ID. Returns HTTP 200 OK with confirmation message."
+      },
+      "response": []
+    },
+    {
+      "name": "6. Display Merit List",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/students/merit-list",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "students",
+            "merit-list"
+          ]
+        },
+        "description": "Display the university merit list with students sorted by averageScore in descending order. Returns HTTP 200 OK."
+      },
+      "response": []
+    },
+    {
+      "name": "7. Duplicate ID Error Handling (Conflict Test)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"id\": 105,\n  \"name\": \"Duplicate Tester\",\n  \"email\": \"dup@university.edu\",\n  \"department\": \"Computer Science\",\n  \"scores\": [80.0, 85.0],\n  \"technicalSkills\": [\"Java\"]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/students",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "students"
+          ]
+        },
+        "description": "Demonstrates Duplicate ID prevention. Returns HTTP 409 Conflict."
+      },
+      "response": []
+    }
+  ]
+}

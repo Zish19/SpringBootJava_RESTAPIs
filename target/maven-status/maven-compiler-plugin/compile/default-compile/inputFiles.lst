@@ -1,0 +1,12 @@
+C:\Users\Shivam Kumar\Desktop\Project02\src\main\java\com\college\studentmanagement\controller\StudentController.java
+C:\Users\Shivam Kumar\Desktop\Project02\src\main\java\com\college\studentmanagement\dto\ApiResponse.java
+C:\Users\Shivam Kumar\Desktop\Project02\src\main\java\com\college\studentmanagement\dto\UpdateScoresSkillsRequest.java
+C:\Users\Shivam Kumar\Desktop\Project02\src\main\java\com\college\studentmanagement\exception\DuplicateIdException.java
+C:\Users\Shivam Kumar\Desktop\Project02\src\main\java\com\college\studentmanagement\exception\ErrorResponse.java
+C:\Users\Shivam Kumar\Desktop\Project02\src\main\java\com\college\studentmanagement\exception\GlobalExceptionHandler.java
+C:\Users\Shivam Kumar\Desktop\Project02\src\main\java\com\college\studentmanagement\exception\ResourceNotFoundException.java
+C:\Users\Shivam Kumar\Desktop\Project02\src\main\java\com\college\studentmanagement\model\Student.java
+C:\Users\Shivam Kumar\Desktop\Project02\src\main\java\com\college\studentmanagement\repository\StudentRepository.java
+C:\Users\Shivam Kumar\Desktop\Project02\src\main\java\com\college\studentmanagement\service\impl\StudentServiceImpl.java
+C:\Users\Shivam Kumar\Desktop\Project02\src\main\java\com\college\studentmanagement\service\StudentService.java
+C:\Users\Shivam Kumar\Desktop\Project02\src\main\java\com\college\studentmanagement\StudentManagementApplication.java
