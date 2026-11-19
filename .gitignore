@@ -1,0 +1,15 @@
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+### IDE Files ###
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
+
+### Logs & Temp ###
+*.log
+temp_html/
+generate_screenshots.py
